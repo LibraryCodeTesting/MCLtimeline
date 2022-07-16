@@ -181,8 +181,8 @@ li {
 	padding: 20px 40px;
 	text-align: right;
 	transition:.3s;
-	opacity:0;
-
+	opacity:1;
+	/* transform: translateX(-10%); */
     margin-left: -4.5%;  /* moves left boxes to the left */
   
 }
@@ -197,7 +197,7 @@ li {
 	background: #858483;
 	border-radius:50%;
 	box-sizing:border-box;
-	transform: translate(50%,-50%);
+	transform: translate(50%,-50%); 
 }
 .timeline h3 {
 	font-size:28px;
@@ -212,7 +212,7 @@ li {
 .timeline li:nth-child(2n) {
 	align-self: flex-end;
 	text-align: left;
-
+	/* transform: translateX(10%); */  /* this adds white space on the right */
     margin: 5%;  /* removes white space */
 }
     
