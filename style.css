@@ -2,6 +2,7 @@
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
+    
 }
 
 
@@ -11,7 +12,7 @@ body {
  /* color:#4d4c59; */
   font-family: "PT Serif",Georgia,Cambria,"Times New Roman",Times,serif;
     color: #ffffff;
-    
+    background-color: #1c1c1c;
 }
 
 h1 {
@@ -26,123 +27,300 @@ p {
     text-align: left;
 }
 
+
+
+
+
+/* Navigation Menu on the left******************************************/
+
+
+.wrapper {    /* Where is the end?????????????*/
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  color: #fff;
+ /* position: relative;   */
+    overflow-x:hidden;
+}
+
+
+
+
+.nav__wrapper {
+    z-index: 1;
+    position: fixed;
+    padding-left: 4%;
+    top: 0%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+
+.nav {
+  margin: 0 0 100px 30px;  /* ALIGNS EVERYTHING */
+}
+
+
+.nav__counter {
+  font-size: 18px;
+    font-weight: 800;
+    text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    -webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.nav__counter__chapter {
+    height: 0px;                /* moved the lines width*/
+    overflow: hidden;
+
+}
+.nav__title {
+    font-weight: 300;
+    margin-top: 1px;            /* moved the lines width*/
+    height: 0px;                /* moved the lines width*/
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+
+
+/*.nav__body {
+    overflow: hidden;
+} */
+
+.nav__body {
+    font-weight: 100;
+    font-size: 15px;    /* expanded paragraph descriptive info */
+    font-weight: 700;
+    text-shadow: 0px 0px 10px rgba(0,0,0,1);
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+
+    
+}
+
+.nav li {
+    position: relative;
+    transition: all 0.3s ease-out;
+    margin-bottom: 1em;
+    border: 0px solid black;
+    background-color: rgba(33, 33, 33, 0);
+    max-width: 160px; 
+    min-width: 100px;
+    padding: 0%;  
+    -webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0); 
+    box-shadow: -1px 1px 50px 10px rgba(0,0,0,);
+
+}
+
+
+
+
+/***** MOVES LINE CLOSER ********/
+
+
+.nav li:after {
+  content: "";              /* makes the lines disappear */
+  display: block;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  height: 250px;            /*Line height*/
+  width: 20px;              /* Line width */
+  position: absolute;
+  left: -30px;              /* move the chapter more right */
+  top: 15px;                /* move ONLY lines up and down */
+
+}
+
+/***smoother transition */
+.nav li a {
+  display: block;
+  padding: 0;
+  color: #fff;
+  transition: all 0.15s ease-out;
+}
+
+
+.nav li a:hover {
+    background-color: transparent;
+    padding-left: 1em;          /* how far right the number goes on a hover */
+}
+.nav li a:focus {
+    background-color: transparent;      /* background behind clicked-on chapter */
+}
+
+
+/* background when active ***/
+.nav li.active {
+    background-color: rgba(0, 0, 0, .6); 
+    border: 3px solid black;
+    pointer-events: none;
+    padding-left: 1em;          /* how far the details are to the right when clicked on */
+}
+.nav li.active:after {
+    width: 4vw;                 /*length of line coming out when clicked on */ 
+    height: 300px;
+}
+.nav li.active .nav__counter {
+    font-size: 4vw;             /* clicked on chapter number size */
+}
+
+.nav li.active .nav__counter__chapter {
+    font-size: 1.5vw;           /* "chapter" word size, clicked on */
+    font-weight: bold;
+    margin-bottom: 1vm;         /* distance above chapter number when clicked on */
+    overflow: visible;
+}
+.nav li.active .nav__title {
+    width: 4vw;                 /* chapter detail paragraph widths when clicked on */
+    margin-left: 3vw;
+    overflow: visible;
+    font-size: 1.8vw;
+}
+
+.nav li.active .nav__body {
+  height: 100px;
+  opacity: 1;
+  overflow: visible;
+}
+
+
+
+
+
+
+
+
 .section {
     background-color: #1c1c1c;
     text-align: center;
     z-index: 99;
     position: absolute;
     width: 100%;
-        border-top: 10px solid #000000;
+    border-top: 10px solid #000000;
     border-bottom: 10px solid #000000;
     height: 200px;   /* this and line-height make font centered */
-    line-height: 175px;
+    padding-top: 2.75%;
 }
 
-.twentiesSection {
+#twentiesSection {
     font-size: 5em;
     font-family: 'Limelight', cursive;
 }
 .twentiesYear {
+    font-size: 4em !important;
     font-family: 'Limelight', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.thirtiesSection {
+#thirtiesSection {
     font-size: 5em;
     font-family: 'Poiret One', cursive;
 }
 .thirtiesYear {
+    font-size: 3em !important;
         font-family: 'Poiret One', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.fourtiesSection {
+#fourtiesSection {
     font-size: 5em;
     font-family: 'Oooh Baby', cursive;
 }
 .fourtiesYear {
+    font-size: 4em !important;
     font-family: 'Oooh Baby', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.fiftiesSection {
+#fiftiesSection {
     font-size: 5em;
     font-family: 'Slackey', cursive;
 }
 
 .fiftiesYear {
+    font-size: 3em !important;
     font-family: 'Slackey', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.sixtiesSection {
+#sixtiesSection {
     font-size: 5em;
     font-family: 'Chicle', cursive;
 }
 
 .sixtiesYear {
+    font-size: 4em !important;
     font-family: 'Chicle', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.seventiesSection {
+#seventiesSection {
     font-size: 5em;
     font-family: 'Monoton', cursive;
 }
 
 .seventiesYear {
+    font-size: 3em !important;
     font-family: 'Monoton', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.eightiesSection {
+#eightiesSection {
     font-size: 5em;
     font-family: 'Press Start 2P', cursive;
 }
 
 .eightiesYear {
+    font-size: 2.5em !important;
     font-family: 'Press Start 2P', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.ninetiesSection {
+#ninetiesSection {
     font-size: 5em;
     font-family: 'Loved by the King', cursive;
 }
 
 .ninetiesYear {
+    font-size: 4em !important;
     font-family: 'Loved by the King', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.twoThousandsSection {
+#twoThousandsSection {
     font-size: 5em;
     font-family: 'Rampart One', cursive;
 }
 
 .twoThousandsYear {
+    font-size: 4em !important;
     font-family: 'Rampart One', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.twentyTensSection {
+#twentyTensSection {
     font-size: 5em;
     font-family: 'Short Stack', cursive;
 }
 
 .twentyTensYear {
+    font-size: 3em !important;
     font-family: 'Short Stack', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
 }
 
-.twentyTwentiesSection {
+#twentyTwentiesSection {
     font-size: 5em;
     font-family: 'Short Stack', cursive;
 }
 
 .container {
 /*	width:100vw; */
-	margin:10vw;
+	margin:20%;
 }
 
 
@@ -180,10 +358,10 @@ li {
 	position:absolute;
 	top:0;
 	bottom:0;
-    height: 12100px;
+    height: 13000px;      /*height of line */
 	left:50%;
 	width: 0.5vw;
-	background-color: #1c1c1c;
+	background-color: rgba(0, 0, 0, .8);
 }
 
 
@@ -220,7 +398,7 @@ li {
 }
 .timeline p {
   font-size: 20px;
-  line-height: 28px;
+ /*  line-height: 28px; */
 }
 
 /* li on the right */
@@ -248,7 +426,7 @@ li {
 }
 
 .twenties {
-    height: 1200px;
+    height: 1400px;
     background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300b74c' fill-opacity='.75'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
@@ -265,18 +443,18 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .fourtiesDates {
-    top: 1250px;
+    top: 1150px;
 }
 
 .fourties {
-    height: 1000px;
+    height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%230b6ec0' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 }
 
 .fiftiesDates {
-    top: 1600px;
+    top: 1500px;
 }
 
 .fifties {
@@ -287,29 +465,29 @@ background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox=
 }
 
 .sixtiesDates {
-    top: 2000px;
+    top: 1800px;
 }
 
 .sixties {
-    height: 1000px;
+    height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 15l15 15H0V15zM15 0l15 15V0H15z' fill='%23934f9d' fill-opacity='0.9' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 }
 
 .seventiesDates {
-    top: 2300px;
+    top: 2100px;
 }
 
 .seventies {
-    height: 1000px;
+    height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40c5.523 0 10-4.477 10-10V0C4.477 0 0 4.477 0 10v30zm22 0c-5.523 0-10-4.477-10-10V0c5.523 0 10 4.477 10 10v30z' fill='%23fb6219' fill-opacity='.9' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 }
 
 .eightiesDates {
-    top: 2700px;
+    top: 2500px;
 }
 
 .eighties {
@@ -320,29 +498,29 @@ background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox=
 }
 
 .ninetiesDates {
-    top: 3100px;
+    top: 2900px;
 }
 
 .nineties {
-    height: 1200px;
+    height: 1300px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fbbf00' fill-opacity='0.9'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 
 }
 
 .twoThousandsDates {
-    top: 3600px;
+    top: 3300px;
 }
 
 .twoThousands {
-    height: 1100px;
+    height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23934f9d' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 }
 
 .twentyTensDates {
-    top: 4000px;
+    top: 3600px;
 }
 
 .twentyTens {
@@ -353,12 +531,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox=
 }
 
 .twentyTwentiesDates {
-    top: 4500px;
+    top: 3900px;
 }
 
 .twentyTwenties {
     height: 1200px;
-    margin-bottom: -10%;  /* removes the white space on the bottom */
+    margin-bottom: -50%;  /* removes the white space on the bottom */
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18c0-1.105.887-2 1.998-2 1.104 0 2-.895 2.002-1.994V14v6h-4v-2zM0 13.998C0 12.895.888 12 2 12c1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2 .888 2 2v2H0v-6.002zm16 4.004A1.994 1.994 0 0 1 14 20c-1.105 0-2-.887-2-1.998v-4.004A1.994 1.994 0 0 0 10 12c-1.105 0-2-.888-2-2 0-1.105-.888-2-2-2-1.105 0-2-.887-2-1.998V1.998A1.994 1.994 0 0 0 2 0a2 2 0 0 0-2 2V0h8v2c0 1.105.888 2 2 2 1.105 0 2 .888 2 2 0 1.105.888 2 2 2 1.105 0 2-.888 2-2 0-1.105.888-2 2-2 1.105 0 2-.888 2-2V0h4v6.002A1.994 1.994 0 0 1 22 8c-1.105 0-2 .888-2 2 0 1.105-.888 2-2 2-1.105 0-2 .887-2 1.998v4.004z' fill='%2300b74c' fill-opacity='.9' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
