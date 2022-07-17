@@ -2,6 +2,8 @@
 <html lang="en" >
     
 <style>
+    @import url(https://fonts.googleapis.com/css?family=Righteous); /* 100 years font */
+    
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /* MCL Font */
 @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap'); /* 1920s */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); /* 1930s */
@@ -17,38 +19,57 @@
     
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Timeline Vertical - HTML + CSS  + animation</title>
+  <title>Timeline - Monmouth County Library </title>
 
     
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'>
     <link rel="stylesheet" href="./style.css">
-
+ 
 </head>
     
 <body data-spy="scroll" data-target="#navbar-example">
-    <div class="section"><h1 id="twentiesSection">The 1920s</h1></div>
+    
+    <div class="celebrating">
+    <img class = "logo" src="whiteLogo.png"/>
+    <h2 data-shadow='Celebrating'>Celebrating</h2>
+    <br>
+    <h4 data-shadow2='100 years!'>100 years!</h4>
+        
+        
+        
+        <div class="wrapper2 border-gradient border-glow">
+  <h1 class="text-glow">Monmouth County Library</h1>
+  <h3 class="text-glow" id="glowSubtitle">One Century of Public Service</h3><br>
+
+</div>
+        
+        
+        
+    </div>
+    
+    <div class="section" id="twentiesNav"><h1 id="twentiesSection">The 1920s</h1></div>
     <div class="twenties"></div>
-    <div class="section"><h1 id="thirtiesSection">The 1930s</h1></div>
+    <div class="section" id="thirtiesNav"><h1 id="thirtiesSection">The 1930s</h1></div>
     <div class="thirties"></div>
-    <div class="section"><h1 id="fourtiesSection">The 1940s</h1></div>
+    <div class="section" id="fourtiesNav"><h1 id="fourtiesSection">The 1940s</h1></div>
     <div class="fourties"></div>
-    <div class="section"><h1 id="fiftiesSection">The 1950s</h1></div>
+    <div class="section" id="fiftiesNav"><h1 id="fiftiesSection">The 1950s</h1></div>
     <div class="fifties"></div>
-    <div class="section"><h1 id="sixtiesSection">The 1960s</h1></div>
+    <div class="section" id="sixtiesNav"><h1 id="sixtiesSection">The 1960s</h1></div>
     <div class="sixties"></div>
-    <div class="section"><h1 id="seventiesSection">The 1970s</h1></div>
+    <div class="section" id="seventiesNav"><h1 id="seventiesSection">The 1970s</h1></div>
     <div class="seventies"></div>
-    <div class="section"><h1 id="eightiesSection">The 1980s</h1></div>
+    <div class="section" id="eightiesNav"><h1 id="eightiesSection">The 1980s</h1></div>
     <div class="eighties"></div>
-    <div class="section"><h1 id="ninetiesSection">The 1990s</h1></div>
+    <div class="section" id="ninetiesNav"><h1 id="ninetiesSection">The 1990s</h1></div>
     <div class="nineties"></div>
-    <div class="section"><h1 id="twoThousandsSection">The 2000s</h1></div>
+    <div class="section" id="twoThousandsNav"><h1 id="twoThousandsSection">The 2000s</h1></div>
     <div class="twoThousands"></div>
-    <div class="section"><h1 id="twentyTensSection">The 2010s</h1></div>
+    <div class="section" id="twentyTensNav"><h1 id="twentyTensSection">The 2010s</h1></div>
     <div class="twentyTens"></div>
-    <div class="section"><h1 id="twentyTwentiesSection">The 2020s</h1></div>
+    <div class="section" id="twentyTwentiesNav"><h1 id="twentyTwentiesSection">The 2020s</h1></div>
     <div class="twentyTwenties"></div>
 <!-- partial:index.partial.html -->
 
@@ -58,7 +79,7 @@
       <ul class="nav">
 
         <li role="presentation" class="active">
-          <a href="#twentiesSection">
+          <a href="#twentiesNav">
             <span class="nav__counter">1920s</span>
             <h3 class="nav__title">Intro</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
@@ -66,7 +87,7 @@
         </li>
 
         <li role="presentation">
-          <a href="#thirtiesSection">
+          <a href="#thirtiesNav">
             <span class="nav__counter">1930s</span>
             <h3 class="nav__title">Section 2 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
@@ -74,7 +95,7 @@
         </li>
 
         <li role="presentation">
-          <a href="#fourtiesSection">
+          <a href="#fourtiesNav">
             <span class="nav__counter">1940s</span>
             <h3 class="nav__title">Section 3 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
@@ -82,7 +103,7 @@
         </li>
         
         <li role="presentation">
-          <a href="#fiftiesSection">
+          <a href="#fiftiesNav">
             <span class="nav__counter">1950s</span>
             <h3 class="nav__title">Section 4 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
@@ -90,7 +111,7 @@
         </li>
         
         <li role="presentation">
-          <a href="#sixtiesSection">
+          <a href="#sixtiesNav">
             <span class="nav__counter">1960s</span>
             <h3 class="nav__title">Section 5 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
@@ -98,42 +119,42 @@
         </li>
         
         <li role="presentation">
-          <a href="#seventiesSection">
+          <a href="#seventiesNav">
             <span class="nav__counter">1970s</span>
             <h3 class="nav__title">Section 6 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
           </a>
         </li>
         <li role="presentation">
-          <a href="#eightiesSection">
+          <a href="#eightiesNav">
             <span class="nav__counter">1980s</span>
             <h3 class="nav__title">Section 6 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
           </a>
         </li>
         <li role="presentation">
-          <a href="#ninetiesSection">
+          <a href="#ninetiesNav">
             <span class="nav__counter">1990s</span>
             <h3 class="nav__title">Section 6 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
           </a>
         </li>
         <li role="presentation">
-          <a href="#twoThousandsSection">
+          <a href="#twoThousandsNav">
             <span class="nav__counter">2000s</span>
             <h3 class="nav__title">Section 6 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
           </a>
         </li>
         <li role="presentation">
-          <a href="#twentyTensSection">
+          <a href="#twentyTensNav">
             <span class="nav__counter">2010s</span>
             <h3 class="nav__title">Section 6 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
           </a>
         </li>
         <li role="presentation">
-          <a href="#twentyTwentiesSection">
+          <a href="#twentyTwentiesNav">
             <span class="nav__counter">2020s</span>
             <h3 class="nav__title">Section 6 Title</h3>
             <p class="nav__body">Growth.<br>Drive.<br>Expansion.</p>
@@ -144,7 +165,10 @@
     </nav>
     
     
-    
+    <div class = "timelineAndContent">
+        
+        
+        
     <div class="container">
 
   <ul class="timeline">
@@ -311,6 +335,8 @@
     </li>
       
   </ul>
+        
+        </div>  <!-- timeline and content -->
 
     </div> <!-- sectionDiv -->
     </div> <!-- wrapper -->
