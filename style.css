@@ -8,16 +8,181 @@
 
 
 body {
-  */* background-color:#fff; */
+  /* background-color:#fff; */
  /* color:#4d4c59; */
   font-family: "PT Serif",Georgia,Cambria,"Times New Roman",Times,serif;
     color: #ffffff;
-    background-color: #1c1c1c;
+        text-align: center;
+    background-color: hsla(230,40%,50%,1);
 }
+
+
+
+
+
+
+
+
+
+  body:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    }
+
+
+.celebrating {
+    width: 800px;
+    /* border-top: 2px solid white; */
+    margin-left: 25%;
+    position: relative;  /* makes shadows not move */
+    margin-top: 75px;
+    margin-bottom: 1300px;
+}
+
+.logo {
+    opacity: 0.13;
+    position: absolute;
+    top: -15%;
+    left: 3%;
+    
+}
+
+h2, h4 {
+    margin-top: 50px;
+  display: inline-block;
+  color: white;
+  font-family: 'Righteous', serif;
+  font-size: 10em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  }
+
+
+
+  h2:after {
+      margin-top: 50px;
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: 38px;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shad-anim 15s linear infinite;
+    }
+
+
+  h4:after {
+    content: attr(data-shadow2);
+    position: absolute;
+    top: 1.95em; left: 78px;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: shad-anim 15s linear infinite;
+    }
+
+@keyframes shad-anim {
+  0% {background-position: 0 0}
+  0% {background-position: 100% -100%}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+   --background-color: #222;
+   --color-start: #ffffff;
+   --color-end: #b6c2fa;
+   --gradient: linear-gradient(
+                 90deg, 
+                 var(--color-start), 
+                 var(--color-end)
+               ); 
+}
+
+
+
+.wrapper2 {
+  color: var(--color-start);
+  font-family: 'Lato', sans-serif;
+    position: absolute;
+  margin-top: 400px;
+  padding: 30px;
+  width: 800px;
+    left: 30px;
+    font-size: 17px;
+}
+
+.border-glow {
+  box-shadow: 0 0 2rem 0 var(--color-end);
+}
+
+.text-glow {
+  text-shadow: 0 0 0.5rem var(--color-end);
+}
+
+.border-gradient {
+  background: linear-gradient(#222, #222), 
+              var(--gradient);
+  background-origin: padding-box, border-box;
+  background-repeat: no-repeat; /* this is important */
+  border: 0.2rem solid transparent;
+  border-radius: 5px;
+}
+
+.text-gradient {
+  background-image: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+    text-align: justify;
+}
+
+#glowSubtitle {
+    margin-top: -8px;
+}
+
+
+
+
 
 h1 {
     text-shadow: 0px 0px 50px rgba(0,0,0,1);
 }
+
+
 h3{
 	    font-family: 'Lato', sans-serif;
 }
@@ -38,8 +203,8 @@ p {
   font-family: 'Roboto Slab', serif;
   font-weight: 100;
   color: #fff;
- /* position: relative;   */
-    overflow-x:hidden;
+  position: relative;   
+top:-8700px;
 }
 
 
@@ -155,17 +320,17 @@ p {
 
 /* background when active ***/
 .nav li.active {
-    background-color: rgba(0, 0, 0, .6); 
-    border: 3px solid black;
+
     pointer-events: none;
-    padding-left: 1em;          /* how far the details are to the right when clicked on */
+    padding-left: 10px;          /* how far the details are to the right when clicked on */
 }
 .nav li.active:after {
     width: 4vw;                 /*length of line coming out when clicked on */ 
     height: 300px;
+   
 }
 .nav li.active .nav__counter {
-    font-size: 4vw;             /* clicked on chapter number size */
+    font-size: 50px; /* clicked on chapter number size */
 }
 
 .nav li.active .nav__counter__chapter {
@@ -189,13 +354,25 @@ p {
 
 
 
+#clock {
+    margin: 200px;
+    padding: 200px;
+    
+}
 
+
+
+.timelineAndContent {
+    margin-top: 500px;
+}
 
 
 
 
 .section {
     background-color: #1c1c1c;
+    background-image: url(books.jpg);
+    back
     text-align: center;
     z-index: 99;
     position: absolute;
@@ -214,6 +391,7 @@ p {
     font-size: 4em !important;
     font-family: 'Limelight', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #thirtiesSection {
@@ -224,6 +402,7 @@ p {
     font-size: 3em !important;
         font-family: 'Poiret One', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #fourtiesSection {
@@ -234,6 +413,7 @@ p {
     font-size: 4em !important;
     font-family: 'Oooh Baby', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #fiftiesSection {
@@ -245,6 +425,7 @@ p {
     font-size: 3em !important;
     font-family: 'Slackey', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #sixtiesSection {
@@ -256,6 +437,7 @@ p {
     font-size: 4em !important;
     font-family: 'Chicle', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #seventiesSection {
@@ -267,6 +449,7 @@ p {
     font-size: 3em !important;
     font-family: 'Monoton', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #eightiesSection {
@@ -278,6 +461,7 @@ p {
     font-size: 2.5em !important;
     font-family: 'Press Start 2P', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #ninetiesSection {
@@ -289,6 +473,7 @@ p {
     font-size: 4em !important;
     font-family: 'Loved by the King', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #twoThousandsSection {
@@ -300,6 +485,7 @@ p {
     font-size: 4em !important;
     font-family: 'Rampart One', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #twentyTensSection {
@@ -311,6 +497,7 @@ p {
     font-size: 3em !important;
     font-family: 'Short Stack', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
+    margin: 0px;
 }
 
 #twentyTwentiesSection {
@@ -318,9 +505,12 @@ p {
     font-family: 'Short Stack', cursive;
 }
 
+
+
 .container {
+ /*   border-top: 5px solid white; */
 /*	width:100vw; */
-	margin:20%;
+    margin-top: -5000px;
 }
 
 
@@ -337,29 +527,31 @@ li {
   /*  float: right;
    /* margin-left: 3vw;            /* moves maps */
    /* margin-right: 12%;          /* moves word box groups from the right */
-    padding: 2%;  
+    padding: 1%;  
     -webkit-box-shadow: -1px 1px 50px 10px rgba(0,0,0,0.9); 
     box-shadow: -1px 1px 50px 10px rgba(0,0,0,.95);
 }
 
 
 .timeline{
-    top: 0%;
+ /*   border-top: 5px solid white; */
+    top: 0px;
 	position:absolute;
 	display:flex;
 	flex-direction:column;
 	list-style:none;
 	padding-top: 20px;
-	padding-bottom: 20px;
+
+   
 }
 /* the timeline's center vertical line */
 .timeline:before{
 	content:"";
 	position:absolute;
-	top:0;
+	top:-100px; 
 	bottom:0;
     height: 13000px;      /*height of line */
-	left:50%;
+	left:75%;
 	width: 0.5vw;
 	background-color: rgba(0, 0, 0, .8);
 }
@@ -376,7 +568,7 @@ li {
 	transition:.3s;
 	opacity:1;
 	/* transform: translateX(-10%); */
-    margin-left: 0.5%;  /* moves left boxes to the left */
+    margin-left: 25.5%;  /* moves left boxes to the left */
   
 }
 /* the rounded mark on each timeline item */
@@ -405,6 +597,7 @@ li {
 .timeline li:nth-child(2n) {
 	align-self: flex-end;
 	text-align: left;
+    left: 25%;   /* moves boxes on the right left and right */
 	/* transform: translateX(10%); */  /* this adds white space on the right */
     /* margin: 5%; */  /* removes white space */
 }
@@ -422,17 +615,55 @@ li {
 
 
 .twentiesDates {
-    top: 300px;
+  
+}
+
+
+.thirtiesDates {
+    top: 500px;
+}
+
+
+.fourtiesDates {
+    top: 900px;
+}
+
+.fiftiesDates {
+    top: 1300px;
+}
+
+.sixtiesDates {
+    top: 1700px;
+}
+
+.seventiesDates {
+    top: 2100px;
+}
+
+.eightiesDates {
+    top: 2500px;
+}
+
+.ninetiesDates {
+    top: 2900px;
+}
+
+.twoThousandsDates {
+    top: 3400px;
+}
+
+.twentyTensDates {
+    top: 3900px;
+}
+
+.twentyTwentiesDates {
+    top: 4300px;
 }
 
 .twenties {
-    height: 1400px;
+    height: 1300px;
     background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300b74c' fill-opacity='.75'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.thirtiesDates {
-    top: 800px;
 }
 
 .thirties {
@@ -442,19 +673,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 }
 
-.fourtiesDates {
-    top: 1150px;
-}
-
 .fourties {
     height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='84' height='16' viewBox='0 0 84 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M78 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM30 7V4h-2v3h-3v2h3v3h2V9h3V7h-3zM10 0h2v16h-2V0zm6 0h4v16h-4V0zM2 0h4v16H2V0zm50 0h2v16h-2V0zM38 0h2v16h-2V0zm28 0h2v16h-2V0zm-8 0h6v16h-6V0zM42 0h6v16h-6V0z' fill='%230b6ec0' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-}
-
-.fiftiesDates {
-    top: 1500px;
 }
 
 .fifties {
@@ -464,19 +687,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='70' height='70' viewBox=
 
 }
 
-.sixtiesDates {
-    top: 1800px;
-}
-
 .sixties {
     height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 15l15 15H0V15zM15 0l15 15V0H15z' fill='%23934f9d' fill-opacity='0.9' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-}
-
-.seventiesDates {
-    top: 2100px;
 }
 
 .seventies {
@@ -486,19 +701,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox=
 
 }
 
-.eightiesDates {
-    top: 2500px;
-}
-
 .eighties {
     height: 1200px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 0H0v36h36V0zM15.126 2H2v13.126c.367.094.714.24 1.032.428L15.554 3.032c-.188-.318-.334-.665-.428-1.032zM18 4.874V18H4.874c-.094-.367-.24-.714-.428-1.032L16.968 4.446c.318.188.665.334 1.032.428zM22.874 2h11.712L20 16.586V4.874c1.406-.362 2.512-1.468 2.874-2.874zm10.252 18H20v13.126c.367.094.714.24 1.032.428l12.522-12.522c-.188-.318-.334-.665-.428-1.032zM36 22.874V36H22.874c-.094-.367-.24-.714-.428-1.032l12.522-12.522c.318.188.665.334 1.032.428zm0-7.748V3.414L21.414 18h11.712c.362-1.406 1.468-2.512 2.874-2.874zm-18 18V21.414L3.414 36h11.712c.362-1.406 1.468-2.512 2.874-2.874zM4.874 20h11.712L2 34.586V22.874c1.406-.362 2.512-1.468 2.874-2.874z' fill='%230b6ec0' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-}
-
-.ninetiesDates {
-    top: 2900px;
 }
 
 .nineties {
@@ -508,19 +715,12 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 
 }
 
-.twoThousandsDates {
-    top: 3300px;
-}
 
 .twoThousands {
-    height: 1200px;
+    height: 1300px;
 background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23934f9d' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-}
-
-.twentyTensDates {
-    top: 3600px;
 }
 
 .twentyTens {
@@ -528,10 +728,6 @@ background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox=
 background-color: #d04a04;
 background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23000000' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 
-}
-
-.twentyTwentiesDates {
-    top: 3900px;
 }
 
 .twentyTwenties {
