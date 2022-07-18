@@ -339,8 +339,9 @@ top:-8700px;
     padding-left: 10px;          /* how far the details are to the right when clicked on */
 }
 .nav li.active:after {
-    width: 4vw;                 /*length of line coming out when clicked on */ 
+    width: 150px;                 /*length of line coming out when clicked on */ 
     height: 300px;
+    margin-top: -20px;          /* moves the year and adjectives under the active line */
    
 }
 .nav li.active .nav__counter {
