@@ -414,6 +414,8 @@ top:-8700px;
 .twentiesDates {
 		overflow-y: auto;  /* ADDED */
 	text-indent: 2vw; /* ADDED */
+	    max-height: 70vw; /* ADDED */
+        max-width: 40vw; /* ADDED */
 }
 
 #thirtiesSection {
