@@ -204,7 +204,7 @@ p {
         font-family: 'Lato', sans-serif;
     text-align: left;
 	margin-top: 1vw; /* ADDED */
-    font-size: 1.3vw; /* ADDED */
+    font-size: 1.4vw !important; /* ADDED */
 }
 
 
@@ -372,20 +372,13 @@ top:-8700px;
 
 
 
-#clock {
-    margin: 200px;
-    padding: 200px;
-    
+
+
+
+
+.sectionsAndBackgrounds {
+    margin-top: -6300px;
 }
-
-
-
-.timelineAndContent {
-    margin-top: 500px;
-}
-
-
-
 
 .section {
     background-color: #1c1c1c;
@@ -405,7 +398,7 @@ top:-8700px;
     font-family: 'Limelight', cursive
 }
 .twentiesYear {
-    font-size: 2.5vw !important; /* ADDED */
+    font-size: 2.3vw !important; /* ADDED */
     font-family: 'Limelight', cursive;
     text-shadow: 0px 0px 15px rgba(0,0,0,1);
     margin: 0px;
@@ -413,9 +406,10 @@ top:-8700px;
 
 .twentiesDates {
 		overflow-y: auto;  /* ADDED */
+    overflow-x: hidden;
 	text-indent: 2vw; /* ADDED */
-	    max-height: 70vw; /* ADDED */
-        max-width: 40vw; /* ADDED */
+	    max-height: 400px; /* ADDED */
+        max-width: 600px; /* ADDED */
 }
 
 #thirtiesSection {
@@ -534,7 +528,7 @@ top:-8700px;
 .container {
  /*   border-top: 5px solid white; */
 /*	width:100vw; */
-    margin-top: -5000px;
+    margin-top: 8000px;
 }
 
 
@@ -559,7 +553,7 @@ li {
 
 .timeline{
  /*   border-top: 5px solid white; */
-    top: 0px;
+    top: 2700px;
 	position:absolute;
 	display:flex;
 	flex-direction:column;
@@ -685,7 +679,7 @@ li {
 }
 
 .twenties {
-    height: 1300px;
+    height: 4100px;
     background-color: #000000;
 background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2300b74c' fill-opacity='.75'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
